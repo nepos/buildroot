@@ -1793,4 +1793,8 @@ menu "Text editors and viewers"
 	source "package/vim/Config.in"
 endmenu
 
+menu "Nepos bundled software"
+	source "package/nepos-kiosk-browser-qt/Config.in"
+endmenu
+
 endmenu
