@@ -1,0 +1,28 @@
+Fix the build with Qt 5.8.0
+
+WindowCancelButtonHint and WindowOkButtonHint were removed in qt5 qtbase
+commit 2be25273e1fc81c5a9e5124f1444100bdb3d458a.
+
+Signed-off-by: Andreas Naumann <anaumann@ultratronik.de>
+
+
+Index: python-pyqt5-5.7/QtCore/sipQtCoreQt.cpp
+===================================================================
+--- python-pyqt5-5.7.orig/QtCore/sipQtCoreQt.cpp	2016-12-20 14:53:14.240498721 +0100
++++ python-pyqt5-5.7/QtCore/sipQtCoreQt.cpp	2016-12-20 15:01:28.604481049 +0100
+@@ -1090,7 +1090,6 @@
+     {sipName_WindingFill, static_cast<int>(Qt::WindingFill), 345},
+     {sipName_Window, static_cast<int>(Qt::Window), 418},
+     {sipName_WindowActive, static_cast<int>(Qt::WindowActive), 416},
+-    {sipName_WindowCancelButtonHint, static_cast<int>(Qt::WindowCancelButtonHint), 418},
+     {sipName_WindowCloseButtonHint, static_cast<int>(Qt::WindowCloseButtonHint), 418},
+     {sipName_WindowContextHelpButtonHint, static_cast<int>(Qt::WindowContextHelpButtonHint), 418},
+     {sipName_WindowDoesNotAcceptFocus, static_cast<int>(Qt::WindowDoesNotAcceptFocus), 418},
+@@ -1103,7 +1102,6 @@
+     {sipName_WindowMinimized, static_cast<int>(Qt::WindowMinimized), 416},
+     {sipName_WindowModal, static_cast<int>(Qt::WindowModal), 415},
+     {sipName_WindowNoState, static_cast<int>(Qt::WindowNoState), 416},
+-    {sipName_WindowOkButtonHint, static_cast<int>(Qt::WindowOkButtonHint), 418},
+     {sipName_WindowOverridesSystemGestures, static_cast<int>(Qt::WindowOverridesSystemGestures), 418},
+     {sipName_WindowShadeButtonHint, static_cast<int>(Qt::WindowShadeButtonHint), 418},
+     {sipName_WindowShortcut, static_cast<int>(Qt::WindowShortcut), 391},
