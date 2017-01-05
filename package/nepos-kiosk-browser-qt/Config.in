@@ -1,0 +1,12 @@
+config BR2_PACKAGE_NEPOS_KIOSK_BROWSER_QT
+	bool "Kiosk browser (Qt)"
+	depends on BR2_PACKAGE_QT5
+	select BR2_PACKAGE_QT5BASE_WIDGETS
+	select BR2_PACKAGE_QT5BASE_NETWORK
+	select BR2_PACKAGE_QT5BASE_GUI
+	select BR2_PACKAGE_QT5WEBCHANNEL
+	select BR2_PACKAGE_QT5WEBENGINE
+	help
+	  Simple kiosk browser based on Qt/QWebEngine
+
+	  https://github.com/nepos/kiosk-browser-qt
