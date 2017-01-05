@@ -1,0 +1,21 @@
+config BR2_PACKAGE_QT5WEBENGINE
+	bool "qt5webengine"
+	select BR2_PACKAGE_QT5BASE
+	select BR2_PACKAGE_QT5WEBSOCKETS
+	select BR2_PACKAGE_QT5WEBCHANNEL
+	help
+	  Qt is a cross-platform application and UI framework for
+	  developers using C++.
+
+	  This package corresponds to the qt5webengine module.
+
+	  http://qt.io
+
+if BR2_PACKAGE_QT5WEBENGINE
+
+config BR2_PACKAGE_QT5WEBENGINE_PROPRIETARY_CODECS
+	bool "enable proprietary codecs"
+	help
+	  Enable proprietary H264 and MP3 codecs for QWebkit
+
+endif
