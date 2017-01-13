@@ -62,7 +62,6 @@ define HOST_NODEJS_CONFIGURE_CMDS
 		--without-snapshot \
 		--without-dtrace \
 		--without-etw \
-		--shared-zlib \
 	)
 endef
 
