@@ -1,0 +1,17 @@
+config BR2_PACKAGE_QT5WAYLAND
+	bool "qt5wayland"
+	depends on BR2_PACKAGE_WAYLAND
+	select BR2_PACKAGE_QT5BASE_OPENGL_ES2
+	select BR2_PACKAGE_QT5DECLARATIVE
+	select BR2_PACKAGE_QT5DECLARATIVE_QUICK
+	help
+	  Qt is a cross-platform application and UI framework for
+	  developers using C++.
+
+	  This package corresponds to the qt5wayland module.
+
+	  http://qt.io
+
+comment "Qt5Wayland needs wayland and ES2 as Qt5 OpenGL implementation"
+	depends on !BR2_PACKAGE_WAYLAND || !BR2_PACKAGE_QT5BASE_OPENGL_ES2
+
