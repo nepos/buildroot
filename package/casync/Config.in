@@ -1,0 +1,8 @@
+config BR2_PACKAGE_CASYNC
+	bool "casync"
+	select BR2_PACKAGE_XZ
+	select BR2_PACKAGE_LIBGCRYPT
+	help
+	  casync — Content Addressable Data Synchronizer
+
+	  https://github.com/systemd/casync
